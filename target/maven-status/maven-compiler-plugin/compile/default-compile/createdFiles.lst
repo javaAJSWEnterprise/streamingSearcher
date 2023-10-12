@@ -1,0 +1,15 @@
+com\streamingsearcher\services\TitleServiceImpl.class
+com\streamingsearcher\context\AppContext.class
+com\streamingsearcher\models\Ar.class
+com\streamingsearcher\models\StreamingInfo.class
+com\streamingsearcher\models\Platform.class
+com\streamingsearcher\models\Result.class
+com\streamingsearcher\services\TitleService.class
+com\streamingsearcher\models\Example.class
+com\streamingsearcher\services\AbstractClient.class
+com\streamingsearcher\StreamingsearcherApplication.class
+com\streamingsearcher\models\Title.class
+com\streamingsearcher\controller\TitleController.class
+com\streamingsearcher\repositories\PlatformRepository.class
+com\streamingsearcher\models\MediaContent.class
+com\streamingsearcher\repositories\MediaContentRepository.class
