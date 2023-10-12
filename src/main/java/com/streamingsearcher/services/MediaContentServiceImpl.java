@@ -6,9 +6,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
-
 @Service
 public class MediaContentServiceImpl implements MediaContentService {
 
@@ -31,23 +28,9 @@ public class MediaContentServiceImpl implements MediaContentService {
         return mediaContentRepository.save(mediaContent);
     }
 
-    @Override
-    public void deleteMediaContent(String mediaContentId) {
-        mediaContentRepository.deleteById(mediaContentId);
-    }
 
     @Override
     public MediaContent getMediaContentById(String mediaContentId) {
         return mediaContentRepository.findMediaContentByIdWithPlatformLoad(mediaContentId);
-    }
-
-    @Override
-    public List<MediaContent> getAllMediaContent() {
-        return mediaContentRepository.findAll();
-    }
-
-    @Override
-    public MediaContent getMediaContentWithPlatforms(String mediaContentId) {
-        return mediaContentRepository.findMediaContentWithPlatforms(mediaContentId);
     }
 }

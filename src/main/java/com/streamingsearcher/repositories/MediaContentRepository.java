@@ -6,8 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public interface MediaContentRepository extends JpaRepository<MediaContent, String> {
     @Query("SELECT p FROM Platform p JOIN p.mediaContents mc WHERE mc.id = :mediaContentId")
