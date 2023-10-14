@@ -25,9 +25,9 @@ public class TitleController {
     }*/
 
     @GetMapping
-    public ResponseEntity<Example> getInfoTitle(@RequestParam(name = "id")String id) {
+    public ResponseEntity<?> getInfoTitle(@RequestParam(name = "id")String id) {
         //titleService.getInfoTitle(id);
-        return ResponseEntity.ok(titleService.getInfoTitle(id));
+        return ResponseEntity.ok(titleService.getMultimediaById(id));
     }
 
     @GetMapping("/all")

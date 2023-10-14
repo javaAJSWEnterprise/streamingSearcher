@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b5169a1-6aa6-45d8-8bd6-0e4322803490" name="Changes" comment="Add init data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/Content.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/controller/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/controller/TitleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/AbstractClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/AbstractClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2VuSNedicrp1JhuhLf7lCTJa99h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop/streamingSearcher",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="streamingSearcher" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="streamingSearcher" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StreamingsearcherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="streamingsearcher" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.streamingsearcher.StreamingsearcherApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b5169a1-6aa6-45d8-8bd6-0e4322803490" name="Changes" comment="" />
+      <created>1695684435229</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695684435229</updated>
+      <workItem from="1695684436867" duration="1099000" />
+      <workItem from="1695689227874" duration="6000" />
+      <workItem from="1696885979900" duration="1074000" />
+      <workItem from="1696981664741" duration="3000" />
+      <workItem from="1697075937463" duration="990000" />
+      <workItem from="1697083267787" duration="5237000" />
+      <workItem from="1697130544913" duration="147000" />
+      <workItem from="1697318342081" duration="345000" />
+      <workItem from="1697318761926" duration="4384000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add Dependencies">
+      <option name="closed" value="true" />
+      <created>1697086515200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697086515200</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add init data">
+      <option name="closed" value="true" />
+      <created>1697088485824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697088485824</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add init data">
+      <option name="closed" value="true" />
+      <created>1697318555995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697318555995</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Dependencies" />
+    <MESSAGE value="Add init data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add init data" />
+  </component>
+</project>
