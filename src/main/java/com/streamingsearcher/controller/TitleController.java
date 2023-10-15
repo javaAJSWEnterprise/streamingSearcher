@@ -4,13 +4,10 @@ import com.streamingsearcher.models.Example;
 import com.streamingsearcher.services.TitleServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/title")
+@RequestMapping("/v1/title")
 public class TitleController {
 
     @Autowired
@@ -24,15 +21,17 @@ public class TitleController {
         return titleService.findTitles(name);
     }*/
 
-    @GetMapping
-    public ResponseEntity<?> getInfoTitle(@RequestParam(name = "id")String id) {
+    @GetMapping("/id/{id}")
+    public ResponseEntity<?> getInfoById( @PathVariable String id) {
         //titleService.getInfoTitle(id);
         return ResponseEntity.ok(titleService.getMultimediaById(id).getResult());
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<?> test() {
-        ResponseEntity<?> title = titleService.prueba();
-        return titleService.prueba();
+
+    @GetMapping("/{title}")
+    public ResponseEntity<?> getInfoByTitle(@PathVariable String title) {
+        //titleService.getInfoTitle(id);
+        return ResponseEntity.ok(titleService.findTitles(title));
     }
+
 }

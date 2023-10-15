@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.streamingsearcher.models.Example;
 import com.streamingsearcher.models.MultimediaPlatforms.Content;
+import com.streamingsearcher.models.MultimediaPlatforms.D;
 import com.streamingsearcher.models.MultimediaPlatforms.ResultMultimedia;
 import com.streamingsearcher.models.MultimediaPlatforms.StreamingInfo;
 import com.streamingsearcher.models.Title;
@@ -29,13 +30,14 @@ public class TitleServiceImpl extends AbstractClient implements TitleService{
     ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
-    public ResponseEntity<Title> findTitles(String name) {
-        HttpEntity<Title> entity = new HttpEntity<>(buildHeaders());
+    public D findTitles(String name) {
+        HttpEntity<D> entity = new HttpEntity<>(buildHeaders());
         String uri = baseUrl + name;
         ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-        Title title = null;
+        D title = null;
         try {
-            title = objectMapper.readValue(response.getBody().toString(), Title.class);
+            title = objectMapper.readValue(response.getBody().toString(), D.class);
+            return title;
         } catch (Exception e) {
 
         }
@@ -44,21 +46,7 @@ public class TitleServiceImpl extends AbstractClient implements TitleService{
         return null;
     }
 
-    @Override
-    public Example getInfoTitle(String id) {
-        HttpEntity<Title> entity = new HttpEntity<>(buildHeaders());
-        String uri = getInfoTitle + id;
-        ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
-        Example result = null;
-        objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
-        try {
-            result = objectMapper.readValue(response.getBody(), Example.class);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        System.out.println(result);
-        return result;
-    }
+
 
 
     @Override
@@ -84,12 +72,5 @@ public class TitleServiceImpl extends AbstractClient implements TitleService{
             e.printStackTrace();
             return null;
         }
-    }
-
-    @Override
-    public ResponseEntity<?> prueba() {
-        HttpEntity<?> entity = new HttpEntity<>(buildHeaders());
-        ResponseEntity<String> response = restTemplate.exchange("asd", HttpMethod.GET, entity, String.class);
-        return response;
     }
 }

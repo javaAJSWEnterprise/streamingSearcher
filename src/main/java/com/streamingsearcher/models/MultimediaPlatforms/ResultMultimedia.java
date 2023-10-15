@@ -14,14 +14,21 @@ import java.util.Set;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResultMultimedia  {
     @JsonProperty("type")
+    @JsonAlias("q")
     private String type;
     @JsonProperty("title")
+    @JsonAlias("l")
     private String title;
     @JsonProperty("streamingInfo")
     private Map<String, Set<StreamingInfo>> streamingInfo;
     @JsonProperty("year")
-    @JsonAlias("firstAirYear")
+    @JsonAlias({"firstAirYear", "y"})
     private int year;
     @JsonProperty("imdbId")
+    @JsonAlias("id")
     private String imdbId;
+    @JsonProperty("i")
+    private MultimediaImage image;
+    @JsonProperty("rank")
+    private int rank;
 }

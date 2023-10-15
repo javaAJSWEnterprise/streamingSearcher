@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b5169a1-6aa6-45d8-8bd6-0e4322803490" name="Changes" comment="Change Id Service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/StreamingInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/MultimediaImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/controller/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/controller/TitleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/Content.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/controller/TitleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/controller/TitleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/Content.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/StreamingInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/StreamingInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/services/TitleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/services/TitleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/services/TitleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/services/TitleServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,26 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "StreamingApi",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/streamingSearcher",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;StreamingApi&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/streamingSearcher&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="streamingSearcher" />
