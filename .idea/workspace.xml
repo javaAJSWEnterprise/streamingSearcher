@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b5169a1-6aa6-45d8-8bd6-0e4322803490" name="Changes" comment="Add init data">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.java" afterDir="false" />
+    <list default="true" id="9b5169a1-6aa6-45d8-8bd6-0e4322803490" name="Changes" comment="Change Id Service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/StreamingInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/controller/TitleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/controller/TitleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/AbstractClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/AbstractClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/streamingsearcher/services/TitleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/controller/TitleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/controller/TitleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/Content.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/Content.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/models/MultimediaPlatforms/ResultMultimedia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/streamingsearcher/services/TitleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/streamingsearcher/services/TitleServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "StreamingApi",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/streamingSearcher",
     "node.js.detected.package.eslint": "true",
@@ -102,7 +107,7 @@
       <workItem from="1697083267787" duration="5237000" />
       <workItem from="1697130544913" duration="147000" />
       <workItem from="1697318342081" duration="345000" />
-      <workItem from="1697318761926" duration="4384000" />
+      <workItem from="1697318761926" duration="9788000" />
     </task>
     <task id="LOCAL-00001" summary="Add Dependencies">
       <option name="closed" value="true" />
@@ -128,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697318555995</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Change Id Service">
+      <option name="closed" value="true" />
+      <created>1697324300385</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697324300385</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Dependencies" />
     <MESSAGE value="Add init data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add init data" />
+    <MESSAGE value="Change Id Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Id Service" />
   </component>
 </project>

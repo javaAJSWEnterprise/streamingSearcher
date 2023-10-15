@@ -4,14 +4,16 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.streamingsearcher.models.Example;
 import com.streamingsearcher.models.MultimediaPlatforms.Content;
+import com.streamingsearcher.models.MultimediaPlatforms.ResultMultimedia;
+import com.streamingsearcher.models.MultimediaPlatforms.StreamingInfo;
 import com.streamingsearcher.models.Title;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 @Service
 public class TitleServiceImpl extends AbstractClient implements TitleService{
@@ -61,21 +63,23 @@ public class TitleServiceImpl extends AbstractClient implements TitleService{
 
     @Override
     public Content getMultimediaById(String id){
-        String json = "{ \"result\": {\"type\": \"movie\",\"title\": \"Robots\",\"streamingInfo\": {\"ar\": [ {\"service\": \"disney\",\"streamingType\": \"subscription\",\"quality\": \"hd\",\"link\": \"https://www.disneyplus.com/movies/robots/1WZb0cTgTKlY\",\"videoLink\": \"https://www.disneyplus.com/video/a9b45364-cb30-467b-8a43-382a934c4953\",\"availableSince\": 1649652397 }, {\"service\": \"apple\",\"streamingType\": \"addon\",\"quality\": \"hd\",\"addon\": \"tvs.sbd.1000216\",\"link\": \"https://tv.apple.com/ar/movie/robots/umc.cmc.4l9smhgi3t0kl8aiuhrvwz5e7\",\"availableSince\": 1694782217 } ] },\"year\": 2005,\"imdbId\": \"tt0358082\",\"tmdbId\": 9928 }}";
 
-        ObjectMapper objectMapper = new ObjectMapper();
+        HttpEntity<Title> entity = new HttpEntity<>(buildHeaders());
+        String uri = getInfoTitle + id;
+        ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
+        objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
         try {
-            Content content = objectMapper.readValue(json, Content.class);
-
-
-            if ( content.getResult().getStreamingInfo() != null) {
-                // Acceder a "streamingInfo" si no está vacío
-                Map<String, List<Map<String, Object>>> streamingInfo = content.getResult().getStreamingInfo();
-                // Puedes acceder a las propiedades dentro de "streamingInfo" según sea necesario
+            Content content = objectMapper.readValue(response.getBody(), Content.class);
+            ResultMultimedia resultMultimedia = content.getResult();
+            if (resultMultimedia != null && resultMultimedia.getStreamingInfo() != null) {
+                Map<String, Set<StreamingInfo>> streamingInfo = resultMultimedia.getStreamingInfo();
+                Set<StreamingInfo> arServices = streamingInfo.get("ar");
+                Map<String, Set<StreamingInfo>> services = new HashMap<String, Set<StreamingInfo>>();
+                services.put("ar", arServices);
+                resultMultimedia.setStreamingInfo(services);
             }
-
             return content;
-            // Puedes acceder a otras propiedades dentro de "result" si es necesario
         } catch (Exception e) {
             e.printStackTrace();
             return null;
