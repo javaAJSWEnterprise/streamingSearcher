@@ -2,7 +2,6 @@ package com.streamingsearcher.services;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.streamingsearcher.models.Example;
 import com.streamingsearcher.models.MultimediaPlatforms.Content;
 import com.streamingsearcher.models.MultimediaPlatforms.D;
 import com.streamingsearcher.models.MultimediaPlatforms.ResultMultimedia;
@@ -29,22 +28,22 @@ public class TitleServiceImpl extends AbstractClient implements TitleService{
 
     ObjectMapper objectMapper = new ObjectMapper();
 
-    @Override
     public D findTitles(String name) {
         HttpEntity<D> entity = new HttpEntity<>(buildHeaders());
         String uri = baseUrl + name;
         ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
         D title = null;
         try {
-            title = objectMapper.readValue(response.getBody().toString(), D.class);
+            title = objectMapper.readValue(response.getBody(), D.class);
+
             return title;
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
-        System.out.println(title);
-
         return null;
     }
+
+
 
 
 

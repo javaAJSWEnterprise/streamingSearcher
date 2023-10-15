@@ -27,7 +27,8 @@ public class ResultMultimedia  {
     @JsonProperty("imdbId")
     @JsonAlias("id")
     private String imdbId;
-    @JsonProperty("i")
+    @JsonProperty("image")
+    @JsonAlias("i")
     private MultimediaImage image;
     @JsonProperty("rank")
     private int rank;

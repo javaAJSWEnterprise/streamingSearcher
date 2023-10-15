@@ -31,7 +31,7 @@ public class TitleController {
     @GetMapping("/{title}")
     public ResponseEntity<?> getInfoByTitle(@PathVariable String title) {
         //titleService.getInfoTitle(id);
-        return ResponseEntity.ok(titleService.findTitles(title));
+        return ResponseEntity.ok(titleService.findTitles(title).getResults());
     }
 
 }
