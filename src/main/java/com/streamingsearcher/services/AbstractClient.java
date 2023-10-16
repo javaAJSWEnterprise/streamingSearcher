@@ -18,7 +18,7 @@ public abstract class AbstractClient {
 
     protected HttpHeaders buildHeaders() {
         HttpHeaders headers = new HttpHeaders();
-        headers.set("X-Rapidapi-Key", "ea7d5eb311msh8e2903dcba31779p16bbaajsn2ec0072f2ad9");
+        headers.set("X-Rapidapi-Key", "9000e51be2msh129e85ca6efb0d6p19acbajsn2cc83cf7161a");
         return headers;
     }
 }
