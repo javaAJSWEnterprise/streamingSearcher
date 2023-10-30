@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MediaContentRepository extends JpaRepository<MediaContent, String> {
-    @Query("SELECT p FROM Platform p JOIN p.mediaContents mc WHERE mc.id = :mediaContentId")
-    MediaContent findMediaContentWithPlatforms(@Param("mediaContentId") String mediaContentId);
 
     @Query("SELECT mc FROM MediaContent mc WHERE mc.id = :mediaContentId AND mc.platformload = true")
     MediaContent findMediaContentByIdWithPlatformLoad(@Param("mediaContentId") String mediaContentId);

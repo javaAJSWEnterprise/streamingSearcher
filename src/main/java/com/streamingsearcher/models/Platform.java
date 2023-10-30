@@ -30,11 +30,7 @@ public class Platform {
         this.name = name;
     }
 
-    @ManyToMany
-    @JoinTable(
-            name = "media_content_platform",
-            joinColumns = @JoinColumn(name = "platform_id"),
-            inverseJoinColumns = @JoinColumn(name = "media_content_id")
-    )
-    private Set<MediaContent> mediaContents;
+    @OneToMany(mappedBy = "platform", cascade = CascadeType.ALL)
+    private Set<MediaContentPlatform> mediaContentPlatforms;
+
 }

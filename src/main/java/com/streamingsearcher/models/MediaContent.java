@@ -25,6 +25,6 @@ public class MediaContent {
 
     }
 
-    @ManyToMany(mappedBy = "mediaContents")
-    private Set<Platform> platforms;
+    @OneToMany(mappedBy = "mediaContent", cascade = CascadeType.ALL)
+    private Set<MediaContentPlatform> mediaContentPlatforms;
 }
