@@ -5,6 +5,8 @@ import com.streamingsearcher.repositories.PlatformRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
 @Service
 public class PlatformServiceImpl implements PlatformService {
 
@@ -18,5 +20,10 @@ public class PlatformServiceImpl implements PlatformService {
     @Override
     public Platform createPlatform(Platform platform) {
         return platformRepository.save(platform);
+    }
+
+    @Override
+    public Set<Platform> findPlatformsByServiceValues(Set<String> serviceValues) {
+        return platformRepository.findPlatformsByServiceValues(serviceValues);
     }
 }

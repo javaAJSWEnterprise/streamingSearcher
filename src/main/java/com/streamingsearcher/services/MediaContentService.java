@@ -1,6 +1,7 @@
 package com.streamingsearcher.services;
 
 import com.streamingsearcher.models.MediaContent;
+import com.streamingsearcher.models.MultimediaPlatforms.ResultMultimedia;
 
 import java.util.List;
 
