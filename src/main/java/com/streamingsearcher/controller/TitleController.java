@@ -7,7 +7,9 @@ import com.streamingsearcher.models.MultimediaPlatforms.MultimediaImage;
 import com.streamingsearcher.models.MultimediaPlatforms.ResultMultimedia;
 import com.streamingsearcher.models.MultimediaPlatforms.StreamingInfo;
 import com.streamingsearcher.models.Platform;
+import com.streamingsearcher.security.JwtServices;
 import com.streamingsearcher.services.*;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +36,8 @@ public class TitleController {
     @Autowired
     private MediaContentPlatformServiceImpl mediaContentPlatformService;
 
+    @Autowired
+    private JwtServices jwtServices;
 
    /* @GetMapping
     public ResponseEntity<?> findTitles(@RequestParam(name = "name")String name) {
@@ -173,6 +177,20 @@ public class TitleController {
         }
 
         return ResponseEntity.ok(validResults);
+    }
+
+    @GetMapping("/auth")
+    public ResponseEntity<?> getToken(@RequestHeader(name = "Authorization") String authorizationHeader){
+        String token = authorizationHeader.substring(7);
+
+        Claims claims = jwtServices.extractAllClaims(token);
+
+        String userId = (String) claims.get("id");
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("id",userId);
+
+        return ResponseEntity.ok(map);
     }
 
 }
