@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 
 import java.util.*;
 
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RestController
 @RequestMapping("/v1/title")
 public class TitleController {
