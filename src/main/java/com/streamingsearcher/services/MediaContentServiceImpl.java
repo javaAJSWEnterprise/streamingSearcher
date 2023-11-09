@@ -24,7 +24,11 @@ public class MediaContentServiceImpl implements MediaContentService {
 
     @Override
     public MediaContent createMediaContent(MediaContent mediaContent) {
-        return mediaContentRepository.save(mediaContent);
+        Optional<MediaContent> find = mediaContentRepository.findById(mediaContent.getId());
+        if(find.isEmpty()){
+            return mediaContentRepository.save(mediaContent);
+        }
+        return null;
     }
 
     @Override
