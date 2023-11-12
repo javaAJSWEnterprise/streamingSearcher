@@ -1,5 +1,6 @@
 package com.streamingsearcher.controller;
 
+import com.streamingsearcher.entities.Favorites;
 import com.streamingsearcher.models.MediaContent;
 import com.streamingsearcher.models.MediaContentPlatform;
 import com.streamingsearcher.models.MultimediaPlatforms.Content;
@@ -7,7 +8,9 @@ import com.streamingsearcher.models.MultimediaPlatforms.MultimediaImage;
 import com.streamingsearcher.models.MultimediaPlatforms.ResultMultimedia;
 import com.streamingsearcher.models.MultimediaPlatforms.StreamingInfo;
 import com.streamingsearcher.models.Platform;
+import com.streamingsearcher.security.JwtServices;
 import com.streamingsearcher.services.*;
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,6 +37,11 @@ public class TitleController {
     @Autowired
     private MediaContentPlatformServiceImpl mediaContentPlatformService;
 
+    @Autowired
+    private JwtServices jwtServices;
+
+    @Autowired
+    private FavoriteServiceImpl favoriteService;
 
    /* @GetMapping
     public ResponseEntity<?> findTitles(@RequestParam(name = "name")String name) {
@@ -57,6 +65,7 @@ public class TitleController {
             MultimediaImage multimediaImage = new MultimediaImage();
             multimediaImage.setImageUrl(mediaContent.getImgurl());
             resultMultimedia.setImage(multimediaImage);
+
             List<MediaContentPlatform> platforms = mediaContentPlatformService.getMediaContentPlatformsByContentId(id);
             Set<StreamingInfo> streamingInfo = new HashSet<>();
             for (MediaContentPlatform mediaContentPlatform: platforms){
@@ -174,5 +183,6 @@ public class TitleController {
 
         return ResponseEntity.ok(validResults);
     }
+
 
 }
