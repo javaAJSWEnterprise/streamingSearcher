@@ -11,6 +11,8 @@ import com.streamingsearcher.models.Platform;
 import com.streamingsearcher.security.JwtServices;
 import com.streamingsearcher.services.*;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
+import jakarta.annotation.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -161,7 +163,7 @@ public class TitleController {
 
 
     @GetMapping("/{title}")
-    public ResponseEntity<?> getInfoByTitle(@PathVariable String title) {
+    public ResponseEntity<?> getInfoByTitle(@PathVariable String title,  @RequestHeader(name = "Authorization", required = false, defaultValue = "") String authorizationHeader) {
 
         List<ResultMultimedia> results = titleService.findTitles(title).getResults();
         // Crear una nueva lista que contiene solo los elementos válidos
@@ -180,7 +182,25 @@ public class TitleController {
             mediaContent1.setImgurl(result.getImage().getImageUrl());
             mediaContentService.createMediaContent(mediaContent1);
         }
-
+        if(!authorizationHeader.isEmpty()){
+            try{
+                String token = authorizationHeader.substring(7);
+                Claims claims = jwtServices.extractAllClaims(token);
+                String userId = (String) claims.get("id");
+                if(!userId.equals("")){
+                    List<Favorites> favs = favoriteService.getFavoritesByUserId(userId);
+                    for(Favorites fav : favs){
+                        for(ResultMultimedia multi : validResults){
+                            if(fav.getMediaContent().getId().equals(multi.getImdbId())){
+                                multi.setFav(true);
+                            }
+                        }
+                    }
+                }
+            }catch (JwtException e){
+                return ResponseEntity.ok(validResults);
+            }
+        }
         return ResponseEntity.ok(validResults);
     }
 

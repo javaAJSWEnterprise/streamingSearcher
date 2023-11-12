@@ -32,4 +32,7 @@ public class ResultMultimedia  {
     private MultimediaImage image;
     @JsonProperty("rank")
     private int rank;
+
+    @JsonProperty("isFav")
+    private boolean isFav;
 }

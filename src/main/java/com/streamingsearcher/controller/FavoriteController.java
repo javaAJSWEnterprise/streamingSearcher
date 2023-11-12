@@ -62,9 +62,9 @@ public class FavoriteController {
             MultimediaImage multimediaImage = new MultimediaImage();
             multimediaImage.setImageUrl(mediaContent.getImgurl());
             resultMultimedia.setImage(multimediaImage);
+            resultMultimedia.setFav(true);
             results.add(resultMultimedia);
         }
-
         return ResponseEntity.ok(results);
     }
 }
