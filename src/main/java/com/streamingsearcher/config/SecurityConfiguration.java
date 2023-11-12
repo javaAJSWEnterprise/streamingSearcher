@@ -24,7 +24,7 @@ public class SecurityConfiguration {
                 .csrf().disable()
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/v1/title/auth").authenticated()
+                                .requestMatchers("/v1/favorite").authenticated()
                                 .anyRequest().permitAll()
                 )
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)

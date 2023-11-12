@@ -1,5 +1,6 @@
 package com.streamingsearcher.controller;
 
+import com.streamingsearcher.entities.Favorites;
 import com.streamingsearcher.models.MediaContent;
 import com.streamingsearcher.models.MediaContentPlatform;
 import com.streamingsearcher.models.MultimediaPlatforms.Content;
@@ -39,6 +40,9 @@ public class TitleController {
     @Autowired
     private JwtServices jwtServices;
 
+    @Autowired
+    private FavoriteServiceImpl favoriteService;
+
    /* @GetMapping
     public ResponseEntity<?> findTitles(@RequestParam(name = "name")String name) {
         titleService.findTitles(name);
@@ -61,6 +65,7 @@ public class TitleController {
             MultimediaImage multimediaImage = new MultimediaImage();
             multimediaImage.setImageUrl(mediaContent.getImgurl());
             resultMultimedia.setImage(multimediaImage);
+
             List<MediaContentPlatform> platforms = mediaContentPlatformService.getMediaContentPlatformsByContentId(id);
             Set<StreamingInfo> streamingInfo = new HashSet<>();
             for (MediaContentPlatform mediaContentPlatform: platforms){
@@ -179,18 +184,5 @@ public class TitleController {
         return ResponseEntity.ok(validResults);
     }
 
-    @GetMapping("/auth")
-    public ResponseEntity<?> getToken(@RequestHeader(name = "Authorization") String authorizationHeader){
-        String token = authorizationHeader.substring(7);
-
-        Claims claims = jwtServices.extractAllClaims(token);
-
-        String userId = (String) claims.get("id");
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("id",userId);
-
-        return ResponseEntity.ok(map);
-    }
 
 }
