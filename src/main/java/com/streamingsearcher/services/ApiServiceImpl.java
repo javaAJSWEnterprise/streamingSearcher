@@ -17,9 +17,9 @@ import java.util.Map;
 import java.util.Set;
 
 @Service
-public class TitleServiceImpl extends AbstractClient implements TitleService{
+public class ApiServiceImpl extends AbstractClient implements ApiService {
 
-    public TitleServiceImpl(RestTemplate restTemplate) {
+    public ApiServiceImpl(RestTemplate restTemplate) {
         super(restTemplate);
     }
 
